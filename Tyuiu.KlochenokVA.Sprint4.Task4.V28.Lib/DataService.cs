@@ -1,8 +1,8 @@
 ﻿using tyuiu.cources.programming.interfaces.Sprint4;
 
-namespace Tyuiu.KlochenokVA.Sprint4.Task3.V30.Lib
+namespace Tyuiu.KlochenokVA.Sprint4.Task4.V28.Lib
 {
-    public class DataService : ISprint4Task3V30
+    public class DataService : ISprint4Task4V28
     {
         public int Calculate(int[,] array)
         {

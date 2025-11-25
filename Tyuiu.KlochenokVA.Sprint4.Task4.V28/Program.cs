@@ -1,6 +1,6 @@
-﻿using Tyuiu.KlochenokVA.Sprint4.Task3.V30.Lib;
+﻿using Tyuiu.KlochenokVA.Sprint4.Task4.V28.Lib;
 
-namespace Tyuiu.KlochenokVA.Sprint4.Task3.V30
+namespace Tyuiu.KlochenokVA.Sprint4.Task4.V28
 {
     class Program
     {
@@ -12,8 +12,8 @@ namespace Tyuiu.KlochenokVA.Sprint4.Task3.V30
             Console.WriteLine("**************************************************************************");
             Console.WriteLine("* Спринт #4                                                              *");
             Console.WriteLine("* Тема: Двумерные массивы (статический ввод)                            *");
-            Console.WriteLine("* Задание #3                                                             *");
-            Console.WriteLine("* Вариант #30                                                            *");
+            Console.WriteLine("* Задание #4                                                             *");
+            Console.WriteLine("* Вариант #28                                                            *");
             Console.WriteLine("* Выполнил: Клоченок Владимир Алексеевич | ИСПб-25-1                   *");
             Console.WriteLine("**************************************************************************");
             Console.WriteLine("* УСЛОВИЕ:                                                               *");
