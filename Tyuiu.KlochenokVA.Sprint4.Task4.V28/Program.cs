@@ -11,29 +11,39 @@ namespace Tyuiu.KlochenokVA.Sprint4.Task4.V28
             Console.Title = "Спринт #4 | Выполнил: Клоченок В. А. | ИСПб-25-1";
             Console.WriteLine("**************************************************************************");
             Console.WriteLine("* Спринт #4                                                              *");
-            Console.WriteLine("* Тема: Двумерные массивы (статический ввод)                            *");
+            Console.WriteLine("* Тема: Двумерные массивы (пользовательский ввод)                       *");
             Console.WriteLine("* Задание #4                                                             *");
             Console.WriteLine("* Вариант #28                                                            *");
             Console.WriteLine("* Выполнил: Клоченок Владимир Алексеевич | ИСПб-25-1                   *");
             Console.WriteLine("**************************************************************************");
             Console.WriteLine("* УСЛОВИЕ:                                                               *");
             Console.WriteLine("* Дан двумерный целочисленный массив 5 на 5 элементов, заполненный      *");
-            Console.WriteLine("* статическими значениями в диапазоне от 1 до 6. Найдите максимальный  *");
-            Console.WriteLine("* элемент в третьей строке массива.                                     *");
+            Console.WriteLine("* значениями с клавиатуры в диапазоне от 1 до 5. Заменить четные       *");
+            Console.WriteLine("* элементы массива на 1.                                                *");
             Console.WriteLine("**************************************************************************");
             Console.WriteLine("* ИСХОДНЫЕ ДАННЫЕ:                                                       *");
             Console.WriteLine("**************************************************************************");
 
-            int[,] mtrx = new int[5, 5] { { 2, 4, 3, 5, 1 },
-                                          { 6, 6, 1, 2, 6 },
-                                          { 3, 3, 2, 1, 5 },
-                                          { 6, 4, 1, 3, 3 },
-                                          { 5, 1, 1, 6, 4 } };
+            Console.WriteLine("Введите количество строк в массиве: ");
+            int rows = Convert.ToInt32(Console.ReadLine());
 
-            int rows = mtrx.GetUpperBound(0) + 1;
-            int columns = mtrx.Length / rows;
+            Console.WriteLine("Введите количество столбцов в массиве: ");
+            int columns = Convert.ToInt32(Console.ReadLine());
 
-            Console.WriteLine("Массив:");
+            int[,] mtrx = new int[rows, columns];
+
+            Console.WriteLine("**************************************************************************");
+
+            for (int i = 0; i < rows; i++)
+            {
+                for (int j = 0; j < columns; j++)
+                {
+                    Console.Write($"Введите {i},{j} элемент массива: ");
+                    mtrx[i, j] = Convert.ToInt32(Console.ReadLine());
+                }
+            }
+
+            Console.WriteLine("\nМассив:");
             for (int i = 0; i < rows; i++)
             {
                 for (int j = 0; j < columns; j++)
@@ -47,9 +57,17 @@ namespace Tyuiu.KlochenokVA.Sprint4.Task4.V28
             Console.WriteLine("* РЕЗУЛЬТАТ:                                                             *");
             Console.WriteLine("**************************************************************************");
 
-            int res = ds.Calculate(mtrx);
+            int[,] res = ds.Calculate(mtrx);
 
-            Console.WriteLine("Максимальный элемент в третьей строке массива = " + res);
+            Console.WriteLine("Массив с замененными четными элементами:");
+            for (int i = 0; i < rows; i++)
+            {
+                for (int j = 0; j < columns; j++)
+                {
+                    Console.Write($"{res[i, j]} \t");
+                }
+                Console.WriteLine();
+            }
             Console.ReadKey();
         }
     }
